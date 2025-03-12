@@ -14,22 +14,27 @@ const ItemCard = ({sectionItem, width}) => {
     const images = [shirt, psp, shoe]
 
   return (
-    <View style={[styles.container, { width: width }]}>
-        <View style={styles.topHalf}>
+    <View style={[styles.container, {width}]}>
+        <TouchableOpacity style={styles.topHalf} onPress={() => {
+                if (sectionItem?.link) {
+                    console.log("navigatin to:", sectionItem.link)
+                    navigation.navigate(sectionItem.link);
+                }
+            }}>
             <Image 
             style={styles.image}
                 // source={require('../../assets/images/psp.jpg')}/
                 source={images.length > 0 ? images[Math.floor(Math.random() * images.length)] : null}
 
             />
-        </View>
+        </TouchableOpacity>
         <TouchableOpacity 
             style={styles.button} 
-            onPress={() => {
-                if (sectionItem?.link) {
-                    navigation.navigate({ name: sectionItem.link });
-                }
-            }}
+            // onPress={() => {
+            //     if (sectionItem?.link) {
+            //         navigation.navigate({ name: sectionItem.link });
+            //     }
+            // }}
         >
             <Text style={styles.buttonText}>ADD TO CART</Text>
         </TouchableOpacity>
@@ -47,7 +52,9 @@ const styles = StyleSheet.create({
     image: { flex: 1, width: '100%', resizeMode:"cover" }, 
     container:{
         flexDirection:"column",
-        // borderWidth
+        // borderWidth:1,
+        // borderColor:"red",
+        
         backgroundColor:"white",
         borderRadius:5,
         shadowColor: '#000',        // Shadow color

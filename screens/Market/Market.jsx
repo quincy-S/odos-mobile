@@ -208,31 +208,22 @@ const Market = () => {
 const styles = StyleSheet.create({
   scrollViewContent: {
     borderWidth:2
-    // flex:1,
-    // width:"100%",
-    // borderWidth:2
-    // paddingBottom:30
   },
   image: { flex: 1, width: '100%', resizeMode:"cover" }, 
   sliderContainer: {
+    
     height:220,
     position:"relative",
     backgroundColor:'#f3f1f2',
     width:"100%",
     shadowColor: '#000',        // Shadow color
-    shadowOffset: { width: 0, height: 1 }, // Offset (x, y)
-    shadowOpacity: 0.3,         // Opacity of the shadow
-    shadowRadius: 4,
-    elevation:4
+        shadowOffset: { width: 0, height: 1 }, // Offset (x, y)
+        shadowOpacity: 0.3,         // Opacity of the shadow
+        shadowRadius: 4, 
+
   },
   que:{
-    padding:10,
     paddingBottom:'20'
-  },
-  flatList: {
-    // flex: 1,
-    // width:"100%",
-    borderWidth:1
   },
   primaryText:{
     color:"#0088CC",
@@ -267,7 +258,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 12,              
     color: 'black',             
-  },
+  }
 
 });
 

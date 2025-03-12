@@ -101,38 +101,38 @@ const items = [
       {
         id:1,
         itemName:"Zara Clothing",
-        itemDescription:"Women's fashion",
+        itemDescription:"Women's fashion 1",
         itemPrice:""
       },
       {
         id:2,
         itemName:"Zara Clothing",
-        itemDescription:"Women's fashion",
+        itemDescription:"Women's fashion 2",
         itemPrice:""
       },
       {
         id:3,
         itemName:"Zara Clothing",
-        itemDescription:"Women's fashion",
+        itemDescription:"Women's fashion 3",
         itemPrice:""
       },
       
       {
         id:4,
         itemName:"Spare Parts",
-        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
+        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 4 60fps...",
         itemPrice:"GHC 250.00"
       },
       {
         id:5,
         itemName:"Kitchenware",
-        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
+        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 5 60fps...",
         itemPrice:"GHC 250.00"
       },
       {
         id:6,
         itemName:"Electronics",
-        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
+        itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 6 60fps...",
         itemPrice:"GHC 250.00"
       }
     ]
@@ -234,8 +234,7 @@ const styles = StyleSheet.create({
 
   },
   que:{
-    paddingBottom:'20',
-    padding:10
+    paddingBottom:'20'
   },
   primaryText:{
     color:"#0088CC",

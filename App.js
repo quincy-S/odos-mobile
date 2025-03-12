@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home/Home';
 import { View, StyleSheet } from 'react-native';
 import Category from "./screens/Category/Category"
-// import Stores from './screens/Stores/Stores';
+import Stores from './screens/Stores/Stores';
 import More from './screens/More/More';
 import Market from './screens/Market/Market';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -13,6 +13,7 @@ import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import Feather from 'react-native-vector-icons/Feather'
 import CustomTabBar from './utils/CustomTabBar';
 import StoresStack from './navigations/StoresStack';
+import { BsBorderWidth } from 'react-icons/bs';
 
 const Tab = createBottomTabNavigator()
 
@@ -72,11 +73,13 @@ const screens = [
 const screenOptions = {
   tabBar: (props) => <CustomTabBar {...props} />,
   tabBarStyle: {
+    
     // backgroundColor: '#D9D9D9', // Tab bar background color
     backgroundColor: '#D9D9D9', // Tab bar background color
-    paddingTop:5,
+    paddingTop:10,
     borderTopRightRadius:20,
-    borderTopLeftRadius:20
+    borderTopLeftRadius:20,
+    height:80
     // borderTopLeftRadius:30
     // height: 60, // Adjust the height of the tab bar
     // borderTopWidth: 0, // Remove border

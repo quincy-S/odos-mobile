@@ -13,21 +13,21 @@ const items = [
         itemName:"Electronics",
         itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
         itemPrice:"GHC 250.00",
-        link:"CustomerStorePage"
+        link:"CartPage"
       },
       {
         id:2,
         itemName:"Electronics",
         itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
         itemPrice:"GHC 250.00",
-        link:"CustomerStorePage"
+        link:"CartPage"
       },
       {
         id:3,
         itemName:"Electronics",
         itemDescription:"Insta360 ONE RS 4K Edition- Waterproof 4K 60fps...",
         itemPrice:"GHC 250.00",
-        link:"CustomerStorePage"
+        link:"CartPage"
       }
     ]
   },
@@ -135,24 +135,19 @@ const styles = StyleSheet.create({
   },
   image: { flex: 1, width: '100%', resizeMode:"cover" }, 
   sliderContainer: {
+    
     height:220,
     position:"relative",
     backgroundColor:'#f3f1f2',
     width:"100%",
     shadowColor: '#000',        // Shadow color
-    shadowOffset: { width: 0, height: 1 }, // Offset (x, y)
-    shadowOpacity: 0.3,         // Opacity of the shadow
-    shadowRadius: 4,
-    elevation:4
+        shadowOffset: { width: 0, height: 1 }, // Offset (x, y)
+        shadowOpacity: 0.3,         // Opacity of the shadow
+        shadowRadius: 4, 
+
   },
   que:{
-    padding:10,
     paddingBottom:'20'
-  },
-  flatList: {
-    // flex: 1,
-    // width:"100%",
-    borderWidth:1
   },
   primaryText:{
     color:"#0088CC",
@@ -187,7 +182,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 12,              
     color: 'black',             
-  },
+  }
 
 });
 
