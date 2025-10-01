@@ -35,23 +35,22 @@ const Home = () => {
   return (
     <MainContainer>
       {/* replace your previous sliderContainer with the Carousel component */}
-      <ScrollView contentContainerStyle={styles.scrollViewContent}>
-        <Carousel
-          slides={slides}
-          height={220}
-          autoPlay={true}
-          autoPlayInterval={4000}
+      {/* <ScrollView contentContainerStyle={styles.scrollViewContent}> */}
+      <Carousel
+        slides={slides}
+        height={220}
+        autoPlay={true}
+        autoPlayInterval={4000}
+      />
+
+      {productSections.map((section, index) => (
+        <ProductList
+          key={index}
+          title={section.title}
+          products={section.products}
         />
-
-
-        {productSections.map((section, index) => (
-          <ProductList
-            key={index}
-            title={section.title}
-            products={section.products}
-          />
-        ))}
-      </ScrollView>
+      ))}
+      {/* </ScrollView> */}
     </MainContainer>
   );
 };

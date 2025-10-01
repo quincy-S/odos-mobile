@@ -85,7 +85,8 @@ const screenOptions = {
     // borderTopWidth: 0, // Remove border
   },
   tabBarLabelStyle: {
-    fontSize: 12, // Font size of tab labels
+    fontSize: 12,
+     // Font size of tab labels
     // fontWeight: 'bold',
     // color: 'white', // Label color
   },
