@@ -21,7 +21,7 @@ const ProductList = ({ title, products }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: 15,
-  },
+  },  
   heading: {
     fontSize: 18,
     fontWeight: "700",
