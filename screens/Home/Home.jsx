@@ -1,38 +1,49 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  ScrollView,
-  View,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { StyleSheet, Text, ScrollView, View } from "react-native";
 import MainContainer from "../components/MainContainer";
-import SectionSlide from "../components/SectionSlide";
-import Market from "../Market/Market";
-import Stores from "../Stores/Stores";
 import ProductList from "../components/ProductList";
 import { productSections } from "../../mock";
+import Carousel from "../components/Carousel";
 
-const man = require("../../assets/images/slide_m.png");
+// example slides: first uses a local asset (you already have this in your project),
+// the others use remote images as a fallback so the example works without extra local files.
+const slides = [
+  {
+    image: require("../../assets/images/slide_m.png"), // keep this if you already have it
+    title: "New Arrivals",
+    subtitle: "Men's fashion",
+    price: "Asking price from GHC50.00",
+    cta: "see more",
+  },
+  {
+    image: require("../../assets/images/slide_o.png"),
+    title: "Summer Collection",
+    subtitle: "Light & Breezy",
+    price: "From GHC30.00",
+    cta: "Shop Now",
+  },
+  {
+    image: require("../../assets/images/slide_b.png"),
+    title: "Limited Offer",
+    subtitle: "Best sellers",
+    price: "Up to 40% off",
+    cta: "Grab it",
+  },
+];
 
 const Home = () => {
   return (
     <MainContainer>
-      <View style={styles.sliderContainer}>
-        <View style={styles.textsContainer}>
-          <Text style={styles.primaryText}>New Arrivals</Text>
-          <Text style={styles.secondaryText}>Men's fashion</Text>
-          <Text style={styles.tertiaryText}>Asking price from GHC50.00</Text>
-
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>see more</Text>
-          </TouchableOpacity>
-        </View>
-        <Image style={styles.image} source={man} />
-      </View>
-
+      {/* replace your previous sliderContainer with the Carousel component */}
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <Carousel
+          slides={slides}
+          height={220}
+          autoPlay={true}
+          autoPlayInterval={4000}
+        />
+
+
         {productSections.map((section, index) => (
           <ProductList
             key={index}
@@ -40,8 +51,6 @@ const Home = () => {
             products={section.products}
           />
         ))}
-        <Stores />
-        <Market />
       </ScrollView>
     </MainContainer>
   );
@@ -50,54 +59,6 @@ const Home = () => {
 const styles = StyleSheet.create({
   scrollViewContent: {
     paddingBottom: 20,
-  },
-  image: {
-    flex: 1,
-    width: "100%",
-    resizeMode: "cover",
-  },
-  sliderContainer: {
-    height: 220,
-    position: "relative",
-    backgroundColor: "#f3f1f2",
-    width: "100%",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-  },
-  primaryText: {
-    color: "#0088CC",
-    fontSize: 13,
-    fontWeight: "700",
-  },
-  secondaryText: {
-    fontSize: 19,
-    fontWeight: "bold",
-  },
-  tertiaryText: {
-    marginTop: 10,
-    fontSize: 12,
-    color: "#0088CC",
-  },
-  textsContainer: {
-    position: "absolute",
-    top: "50%",
-    transform: [{ translateY: -50 }],
-    marginLeft: 34,
-    zIndex: 1,
-  },
-  button: {
-    borderRadius: 50,
-    paddingVertical: 5,
-    marginTop: 10,
-    paddingHorizontal: 10,
-    backgroundColor: "#d9d9d9",
-    alignSelf: "flex-start",
-  },
-  buttonText: {
-    fontSize: 12,
-    color: "black",
   },
 });
 
