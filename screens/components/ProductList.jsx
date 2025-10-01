@@ -10,7 +10,7 @@ const ProductList = ({ title, products }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={products}
-        keyExtractor={(index) => index.toString()}
+        keyExtractor={(item, index) => item.id?.toString() ?? index.toString()}
         renderItem={({ item }) => <ProductCard {...item} />}
         contentContainerStyle={styles.listContent}
       />

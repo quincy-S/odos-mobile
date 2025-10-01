@@ -1,20 +1,20 @@
-import React from 'react'
-import { StyleSheet, SafeAreaView, StatusBar } from 'react-native'
+import React from "react";
+import { StyleSheet, StatusBar, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const MainContainer = ({children}) => {
+const MainContainer = ({ children }) => {
   return (
-    <SafeAreaView style={styles.container}>
-        {children}
-    </SafeAreaView>
-  )
-}
+    // <SafeAreaView style={styles.container}>
+    // <StatusBar barStyle="light-content" backgroundColor="#000000" /
+    <ScrollView style={styles.container}>{children}</ScrollView>
+    // </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor:"#ffffff",
-        paddingTop: StatusBar.currentHeight,
-        flex:1
-    }
-})
+  container: {
+    paddingTop: 20,
+  },
+});
 
-export default MainContainer
+export default MainContainer;
